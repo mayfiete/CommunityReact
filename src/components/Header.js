@@ -1,9 +1,10 @@
 import react from 'react';
 import {
     Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
+    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label, CardImgOverlay
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink } from 'reactstrap';
 
 import { useEffect, useState, isSticky } from 'react';
 
@@ -16,20 +17,24 @@ const Header = () => {
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-6">
-                        <div className=".header"
-                            style={{
-                                backgroundColor: '#f4f4f4',
-                                fontSize: '20px',
-                                fontFamily: 'sans-serif',
-                                padding: '10px',
-                                textAlign: 'center',
-                                borderRadius: '5px'
-                            }}
-                        >
-                            <h1> Community Kanban </h1>
-                            <h2> You can't spell COMMMUNITY without I.T. </h2>
-                        </div>
+                    <div className="col">
+                        <Card>
+                            <CardImgOverlay
+                                style={{
+                                    sticky: "top",
+                                    width: "100%",
+                                    position: "fixed",
+                                    top: 0,
+                                    backgroundColor: 'darkblue'
+                                }}>
+                                You can't spell COMMUNITY without I.T.
+                            </CardImgOverlay>
+                            <CardImg className="col"
+                                src="/assets/images/CKHero.png"
+                                width="100%"
+                                alt="Card image cap"
+                            />
+                        </Card>
                     </div>
                 </div>
             </div>

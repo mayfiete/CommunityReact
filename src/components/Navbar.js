@@ -20,17 +20,18 @@ const Navbar = () => {
 
                             <text style={{
                                 fontSize: "xx-large",
-                                align: "right",
+                                align: "center",
                                 color: 'white',
                                 paddingRight: "10px",
                                 fontWeight: 'bold',
                                 marginRight: '10px',
                                 font: 'Arial',
-                                fontFamily: "cursive"
+                                paddingTop: '10px',
+                                paddingBottom: '10px'
                             }}>
                                 You can't spell COMMUNITY without I.T.
                             </text>
-                            <img src="/assets/images/white-logo.png" />
+
                         </div >
                     </div>
                 </div>

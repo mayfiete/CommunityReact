@@ -1,10 +1,5 @@
 import react from 'react';
-import {
-    Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label, CardImgOverlay
-} from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink } from 'reactstrap';
+import { Card, CardImg } from 'reactstrap';
 
 import { useEffect, useState, isSticky } from 'react';
 
@@ -15,24 +10,26 @@ const Hero = () => {
 
     return (
         <>
-            <div className="container">
-                <div className="row">
+            <div className="container"
+                style={{
+                    position: 'absolute',
+                    left: '0',
+                    width: '100%',
+                    overflow: 'hidden'
+                }}>
+                <div className="row"
+                >
                     <div className="col">
                         <Card>
-                            <CardImgOverlay
-                                style={{
-                                    sticky: "top",
-                                    width: "100%",
-                                    position: "fixed",
-                                    top: 0,
-                                    backgroundColor: 'darkblue'
-                                }}>
-                                You can't spell COMMUNITY without I.T.
-                            </CardImgOverlay>
                             <CardImg className="col"
-                                src="/assets/images/CKHero.png"
-                                width="100%"
+                                src="/assets/images/woman-smiling-glasses.jpg"
                                 alt="Card image cap"
+                                style={{
+                                    position: 'fixed', 
+                                    left: '0',
+                                    width: '100vw',
+                                    overflow: 'hidden'
+                                }}
                             />
                         </Card>
                     </div>

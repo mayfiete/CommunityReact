@@ -1,45 +1,88 @@
-import react from 'react';
-import {
-    Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label, CardImgOverlay
-} from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardLink } from 'reactstrap';
 
-import { useEffect, useState, isSticky } from 'react';
-
-// Sticky Header that 
-
+//Navbar.js
+import React from 'react';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 
 const Header = () => {
-
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Card>
-                            <CardImgOverlay
-                                style={{
-                                    sticky: "top",
-                                    width: "100%",
-                                    position: "fixed",
-                                    top: 0,
-                                    backgroundColor: 'darkblue'
-                                }}>
-                                You can't spell COMMUNITY without I.T.
-                            </CardImgOverlay>
-                            <CardImg className="col"
-                                src="/assets/images/CKHero.png"
-                                width="100%"
-                                alt="Card image cap"
-                            />
-                        </Card>
-                    </div>
+            <div className='row'
+                style={{
+                    position: 'absolute',
+                    left: '0',
+                    width: '100%',
+                    overflow: 'hidden'
+                }}>
+                <div className="col">
+                    <div className="navbar navbar-expand-lg navbar-light bg-light"
+                        expand="lg"
+                        dark sticky="top"
+                        style={{
+                            sticky: "top",
+                            width: "100%",
+                            position: "fixed",
+                            top: 0,
+                            backgroundColor: 'MidnightBlue',
+                        }}>
+                        <text style={{
+                            fontSize: "xx-large",
+                            align: "center",
+                            color: 'yellow',
+                            fontWeight: 'bold',
+                            font: 'Kalam',
+                            fontFamily: 'cursive',
+                            fontStyle: 'italic',
+                            paddingTop: '10px',
+                            paddingBottom: '30px',
+                            marginBottom: '20px'
+                        }}>
+                            COMMUNITY KANBAN
+                        </text>
+                        <br>
+
+                        </br>
+                        <text style={{
+                            fontSize: "x-large",
+                            align: "center",
+                            color: 'white',
+                            font: 'Arial',
+                            paddingTop: '10px',
+                            paddingBottom: '10px',
+                            marginTop: '50px',
+                        }}>
+                            You can't spell Communi
+                        </text>
+                        <text style={{
+                            fontSize: "x-large",
+                            align: "center",
+                            color: 'yellow',
+                            font: 'cougard',
+                            fontStyle: 'italic',
+                            fontFamily: 'cursive',
+                            paddingTop: '10px',
+                            paddingBottom: '10px',
+                            marginTop: '50px',
+                        }}>
+                            IT
+                        </text>
+                        <text style={{
+                            fontSize: "x-large",
+                            align: "center",
+                            color: 'white',
+                            font: 'Arial',
+                            paddingTop: '10px',
+                            paddingBottom: '10px',
+                            marginTop: '50px',
+                        }}>
+                            y without I.T.
+                        </text>
+
+                    </div >
                 </div>
             </div>
+
         </>
     )
-}
+};
 
-export default Header; 
+export default Header;

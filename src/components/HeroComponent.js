@@ -25,7 +25,7 @@ const Hero = () => {
                                 src="/assets/images/woman-smiling-glasses.jpg"
                                 alt="Card image cap"
                                 style={{
-                                    position: 'fixed', 
+                                    position: 'fixed',
                                     left: '0',
                                     width: '100vw',
                                     overflow: 'hidden'

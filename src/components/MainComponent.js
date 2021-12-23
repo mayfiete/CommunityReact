@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Contact from '../pages/Contact';
 import { Connect, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+
+import Home from '../pages/Home';
+import Contact from '../pages/Contact';
 
 
 class Main extends Component {
@@ -8,6 +10,7 @@ class Main extends Component {
         return (
             <div>
                 <Switch>
+                    <Route exact path='/' component={Home} />
                     <Route exact path="/contact" component={Contact} />
                     <Redirect to="/" />
                 </Switch>

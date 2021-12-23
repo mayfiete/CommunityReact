@@ -1,14 +1,16 @@
 
 import React from 'react';
 import Header from '../components/HeaderComponent';
+import Hero from '../components/HeroComponent';
 import { Link } from 'react-router-dom'
 
-function RenderHeader() {
+
+function RenderHero() {
     return (
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <Header />
+                    <Hero />
                 </div>
             </div>
         </div>
@@ -21,7 +23,7 @@ function Home(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-md m-1 d-flex">
-                        <RenderHeader />
+                        <RenderHero />
                     </div>
                 </div>
             </div>

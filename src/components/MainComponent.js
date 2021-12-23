@@ -7,14 +7,24 @@ import Contact from '../pages/Contact';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 
+
+
 class Main extends Component {
+
     render() {
+        const HomePage = () => {
+            return (
+                <Home />
+            );
+        }
+
         return (
+
             <div>
                 <Header />
                 <BrowserRouter>
                     <Switch>
-                        <Route path='/home' component={Home} />
+                        <Route path='/' component={HomePage} />
                         <Route exact path='/contact' component={Contact} />
                         <Redirect to="/" />
                     </Switch>

@@ -5,7 +5,6 @@ import { Connect, Switch, Routes, Route, Redirect, withRouter } from 'react-rout
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/FooterComponent';
-import Navbar from '../components/NavbarComponent';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 
@@ -20,10 +19,8 @@ class Main extends Component {
         }
 
         return (
-
-            <div>
+            <>
                 <Header />
-                <Navbar />
                 <BrowserRouter>
                     <Switch>
                         <Route path='/home' component={HomePage} />
@@ -32,7 +29,7 @@ class Main extends Component {
                     </Switch>
                 </BrowserRouter>
                 <Footer />
-            </div >
+            </ >
 
         );
     }

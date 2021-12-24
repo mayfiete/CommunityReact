@@ -5,7 +5,7 @@ import { Connect, Switch, Routes, Route, Redirect, withRouter } from 'react-rout
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/FooterComponent';
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter } from 'react-router-dom';
 
 
 

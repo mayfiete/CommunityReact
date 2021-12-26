@@ -18,14 +18,16 @@ body {
 
 #nav {
     position: fixed;
+    left: 0;
     display: flex;
+    font-family: helvetica, arial, sans-serif;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color: #fff;
-    background-color: #18042b;
-
-    width: 90vw;
+    background-color: khaki;
+    height: 75px;
+    width: 100%;
     margin: auto;
     top: 100px;
 

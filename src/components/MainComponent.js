@@ -22,7 +22,9 @@ class Main extends Component {
 
         return (
             <>
-                <Header />
+                <Header
+                    bottom="0"
+                />
                 <NavigationBar />
                 <BrowserRouter>
                     <Switch>

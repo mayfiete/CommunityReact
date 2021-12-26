@@ -1,7 +1,10 @@
 
 import React, { Component } from 'react';
 import { Card, CardImg } from 'reactstrap';
-import { div } from 'react-router-dom';
+import {
+    Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
+    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
+} from 'reactstrap';
 
 class NavigationBar extends Component {
     render() {
@@ -10,7 +13,6 @@ class NavigationBar extends Component {
                 <ul id="nav">
                     <div>
                         <div className="nav-link" to="/home"
-                            border="1px solid white"
                         >
                             <i className="fa fa-home fa-lg" /> Home
                         </div>

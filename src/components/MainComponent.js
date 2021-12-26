@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import { Connect, Switch, Routes, Route, Redirect, withRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/FooterComponent';
-import { BrowserRouter } from 'react-router-dom';
+import NavigationBar from '../components/NavigationBarComponent';
+
 
 
 
@@ -21,6 +23,7 @@ class Main extends Component {
         return (
             <>
                 <Header />
+                <NavigationBar />
                 <BrowserRouter>
                     <Switch>
                         <Route path='/home' component={HomePage} />

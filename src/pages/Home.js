@@ -20,7 +20,10 @@ function RenderHero() {
 
 function RenderNavigationBar() {
     return (
-        <div className="container">
+        <div className="container"
+            sticky="top"
+            top="0"
+        >
             <div className="row">
                 <div className="col">
                     <NavigationBar />
@@ -37,13 +40,6 @@ function Home(props) {
                 <div className="row">
                     <div className="col-md m-1 d-flex">
                         <RenderHero />
-                    </div>
-                </div>
-            </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md m-1 d-flex">
-                        <RenderNavigationBar />
                     </div>
                 </div>
             </div>

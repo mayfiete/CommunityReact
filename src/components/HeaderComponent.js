@@ -3,6 +3,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
+import NavigationBar from './NavigationBarComponent';
 
 const Header = () => {
     return (
@@ -22,7 +23,7 @@ const Header = () => {
                             style={{
                                 position: 'absolute',
                                 left: '0',
-                                width: '100%',
+                                width: '100vw',
                                 overflow: 'hidden'
                             }}>
                             <div className="col">
@@ -88,8 +89,8 @@ const Header = () => {
                                     }}>
                                         y without I.T.
                                     </text>
-
                                 </div >
+
                             </div>
                         </div>
                     </div>

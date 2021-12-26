@@ -22,10 +22,11 @@ class Main extends Component {
 
         return (
             <>
-                <Header
+                <Header />
+                <NavigationBar
+                    top="0"
                     bottom="0"
                 />
-                <NavigationBar />
                 <BrowserRouter>
                     <Switch>
                         <Route path='/home' component={HomePage} />

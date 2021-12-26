@@ -17,7 +17,7 @@ function RenderHero() {
         </div>
     );
 }
-
+/*
 function RenderNavigationBar() {
     return (
         <div className="container"
@@ -32,6 +32,7 @@ function RenderNavigationBar() {
         </div>
     );
 }
+*/
 
 function Home(props) {
     return (

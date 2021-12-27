@@ -4,7 +4,7 @@ import Hero from '../components/HeroComponent';
 
 import NavigationBar from '../components/NavigationBarComponent';
 import { Link } from 'react-router-dom'
-import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 
 
 function RenderHero() {
@@ -23,12 +23,10 @@ function RenderProcessOverview() {
     return (
         <div className="container"
             style={{
-                position: 'absolute',
+                position: 'fixed',
                 left: '0',
-                top: '0',
-                bottom: '0',
-                width: '100%',
-                overflow: 'hidden'
+                top: '150px',
+                width: '100%'
             }}>
             <div className="row">
                 <div className="col">
@@ -41,28 +39,20 @@ function RenderProcessOverview() {
                                 overflow: 'hidden'
                             }}
                         />
-                        <CardBody>
-                            <CardTitle
-                                style={{
-                                    position: 'fixed',
-                                    left: '0',
-                                    width: '33vw',
-                                    overflow: 'hidden'
-                                }}
-                            >See our inspiration</CardTitle>
+                        <CardBody
+                            style={{
+                                position: 'fixed',
+                                left: '0',
+                                width: '33vw',
+                                overflow: 'hidden'
+                            }}
+                        >
+                            <CardImgOverlay>
+                                < CardTitle>
+                                    See our inspiration
+                                </CardTitle>
+                            </CardImgOverlay>
 
-                            <CardText
-                                style={{
-                                    position: 'fixed',
-                                    left: '0',
-                                    width: '33vw',
-                                    overflow: 'hidden'
-                                }}
-                            >
-                                As you grow older, you will discover that you have two hands — one for helping yourself, the other for helping others.
-                                <hr></hr>
-                                - Audrey Hepburn
-                            </CardText>
                         </CardBody>
                     </Card>
                 </div>

@@ -12,12 +12,11 @@ const Hero = () => {
         <>
             <div className="container"
                 style={{
-                    position: 'absolute',
+                    position: 'relative',
                     left: '0',
                     top: '400px',
                     bottom: '0',
-                    width: '100%',
-                    overflow: 'hidden'
+                    width: '100%'
                 }}>
                 <div className="row"
                 >
@@ -40,5 +39,6 @@ const Hero = () => {
         </>
     )
 }
+
 
 export default Hero; 

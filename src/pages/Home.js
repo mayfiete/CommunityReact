@@ -36,7 +36,8 @@ function RenderProcessOverview() {
                                 position: 'fixed',
                                 left: '0',
                                 width: '33vw',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                border: '15px solid white'
                             }}
                         />
                         <CardBody

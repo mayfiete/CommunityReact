@@ -12,10 +12,9 @@ const Hero = () => {
         <>
             <div className="container"
                 style={{
-                    position: 'relative',
+                    position: 'fixed',
                     left: '0',
-                    top: '400px',
-                    bottom: '0',
+                    top: '105px',
                     width: '100%'
                 }}>
                 <div className="row"
@@ -29,7 +28,6 @@ const Hero = () => {
                                     position: 'fixed',
                                     left: '0',
                                     width: '100vw',
-                                    overflow: 'hidden'
                                 }}
                             />
                         </Card>

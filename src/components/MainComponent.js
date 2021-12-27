@@ -22,10 +22,11 @@ class Main extends Component {
 
         return (
             <>
-                <Header />
+                <Header
+                    marginBottom="15px"
+                    paddingBottom="15px"
+                />
                 <NavigationBar
-                    top="0"
-                    bottom="0"
                 />
                 <BrowserRouter>
                     <Switch>

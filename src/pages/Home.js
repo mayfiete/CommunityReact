@@ -17,22 +17,7 @@ function RenderHero() {
         </div>
     );
 }
-/*
-function RenderNavigationBar() {
-    return (
-        <div className="container"
-            sticky="top"
-            top="0"
-        >
-            <div className="row">
-                <div className="col">
-                    <NavigationBar />
-                </div>
-            </div>
-        </div>
-    );
-}
-*/
+
 
 function Home(props) {
     return (

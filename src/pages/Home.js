@@ -102,15 +102,14 @@ function Home(props) {
         <>
             <div className="container">
                 <div className="row">
-
                     <div className="col-md m-1 d-flex">
                         <RenderHero />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md m-1 d-flex">
-                        <RenderProcessOverview />
-                    </div>
+            </div>
+            <div className="col-md d-flex" style={{ backgroundColor: "#d3d3d3" }}>
+                <div className="col-md m-1 d-flex">
+                    <RenderProcessOverview />
                 </div>
             </div>
         </ >

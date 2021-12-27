@@ -8,7 +8,11 @@ import NavigationBar from './NavigationBarComponent';
 const Header = () => {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid d-flex justify-content-center"
+                style={{
+                    marginBottom: '25px'
+                }}
+            >
                 <div className="row">
                     <div className="header"
                         style={{
@@ -21,7 +25,7 @@ const Header = () => {
                     >
                         <div className='row'
                             style={{
-                                position: 'absolute',
+                                position: 'fixed',
                                 left: '0',
                                 width: '100vw',
                                 overflow: 'hidden'
@@ -29,10 +33,10 @@ const Header = () => {
                             <div className="col">
                                 <div className="navbar navbar-expand-lg navbar-light bg-light"
                                     expand="lg"
-                                    dark sticky="top"
+                                    sticky="top"
                                     style={{
                                         sticky: "top",
-                                        width: "100%",
+                                        width: "100vw",
                                         position: "fixed",
                                         top: 0,
                                         backgroundColor: 'MidnightBlue',

@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/FooterComponent';
-import NavigationBar from '../components/NavigationBarComponent';
+import NavigationBar from '../components/NavigationBarComponent'; 
 
 
 

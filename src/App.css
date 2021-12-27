@@ -40,3 +40,22 @@ body {
     font-weight: bold;
     color: #069;
 }
+
+#process {
+    position: fixed;
+    left: 0;
+    padding-right: 50px;
+    margin-right: 50px;
+    display: flex;
+    font-family: helvetica, arial, sans-serif;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: auto;
+    color: blue;
+    background-color: khaki;
+    height: 95px;
+    width: 100%;
+    margin: auto;
+    top: 75px;
+}

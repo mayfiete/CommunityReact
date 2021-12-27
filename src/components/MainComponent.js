@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
-import { Connect, Switch, Routes, Route, Redirect, withRouter } from 'react-router-dom';
+import { Connect, Routes, Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
+
 
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import Footer from '../components/FooterComponent';
-import NavigationBar from '../components/NavigationBarComponent'; 
+import NavigationBar from '../components/NavigationBarComponent';
 
 
 

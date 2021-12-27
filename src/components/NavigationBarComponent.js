@@ -10,8 +10,6 @@ import 'bootstrap-social/bootstrap-social.css';
 import Home from '../pages/Home';
 import { BrowserRouter } from 'react-router-dom';
 import {
-    Route,
-    Switch,
     NavLink,
     Router
 } from "react-router-dom";
@@ -61,7 +59,7 @@ class NavigationBar extends Component {
                         <div className="container"
                         >
                             <div
-                                className="row navbar navbar-expand-lg navbar-light bg-light"
+                                className="navbar navbar-expand-lg navbar-light bg-light"
                                 expand="lg"
                                 sticky="top"
                                 style={{

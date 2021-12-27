@@ -43,9 +43,10 @@ function RenderProcessOverview() {
                         <CardBody
                             style={{
                                 position: 'fixed',
-                                left: '0',
-                                width: '33vw',
-                                overflow: 'hidden'
+                                alignContent: 'left',
+                                left: '15px',
+                                top: '225px',
+                                width: '33vw'
                             }}
                         >
                             <CardImgOverlay>

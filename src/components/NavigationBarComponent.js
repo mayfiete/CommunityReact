@@ -4,17 +4,8 @@ import {
     Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
 } from 'reactstrap';
-
-import 'font-awesome/css/font-awesome.css';
-import 'bootstrap-social/bootstrap-social.css';
-import Home from '../pages/Home';
-import { BrowserRouter } from 'react-router-dom';
-import {
-    NavLink,
-    Router
-} from "react-router-dom";
-
-
+import { NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -48,87 +39,83 @@ class NavigationBar extends Component {
         event.preventDefault();
     }
 
-
     render() {
         return (
-            <>
-                <BrowserRouter>
-                    <Navbar dark expand="md"
+            <React.Fragment>
+                <Router>
+                    <Navbar dark sticky="top" expand="md"
 
                     >
-                        <div className="container"
-                        >
-                            <div
-                                className="navbar navbar-expand-lg navbar-light bg-light"
-                                expand="lg"
-                                sticky="top"
-                                style={{
-                                    sticky: "top",
-                                    width: "100vw",
-                                    position: "fixed",
-                                    justifyContent: "spaced-evenly",
-                                    top: 75,
-                                    left: 0,
-                                    backgroundColor: 'khaki',
-                                }}
-                            >
-                                <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/whitelogo.png" height="50" width="150" alt="Logo" /></NavbarBrand>
-                                <NavbarToggler onClick={this.toggleNav} />
-                                <Collapse isOpen={this.state.isNavOpen} navbar>
-                                    <Nav navbar
-                                        display="flex"
-                                        flex-direction="row"
-                                        justifyContent="space-evenly"
-                                        overflow="hidden"
-                                        expand="lg"
-                                    >
-                                        <NavItem>
-                                            <NavLink className="nav-link" to="/home">
-                                                <i className="fa fa-home fa-lg" /> Home
-                                            </NavLink>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLink className="nav-link" to="/directory">
-                                                <i className="fa fa-list fa-lg" /> Directory
-                                            </NavLink>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLink className="nav-link" to="/aboutus">
-                                                <i className="fa fa-info fa-lg" /> About
-                                            </NavLink>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLink className="nav-link" to="/contactus">
-                                                <i className="fa fa-address-card fa-lg" /> Contact Us
-                                            </NavLink>
-                                        </NavItem>
-                                        <NavItem>
-                                            <NavLink className="nav-link" to="/wiki">
-                                                <i className="fa fa-address-card fa-lg" /> Wiki
-                                            </NavLink>
-                                        </NavItem>
-                                    </Nav>
-                                    <span className="navbar-text ml-auto">
-                                        <Button outline onClick={this.toggleModal}>
-                                            <i className="fa fa-sign-in-alt fa-lg" /> Login
-                                        </Button>
-                                    </span>
-                                </Collapse>
-                            </div>
+                        <div className="container">
+                            <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/whitelogo.png" height="50" width="150" alt="Logo" /></NavbarBrand>
+                            <NavbarToggler onClick={this.toggleNav} />
+                            <Collapse isOpen={this.state.isNavOpen} navbar>
+                                <Nav navbar>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/home">
+                                            <i className="fa fa-home fa-lg" /> Home
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/directory">
+                                            <i className="fa fa-list fa-lg" /> Directory
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/aboutus">
+                                            <i className="fa fa-info fa-lg" /> About
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/contactus">
+                                            <i className="fa fa-address-card fa-lg" /> Contact Us
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/wiki">
+                                            <i className="fa fa-address-card fa-lg" /> Wiki
+                                        </NavLink>
+                                    </NavItem>
+                                </Nav>
+                                <span className="navbar-text ml-auto">
+                                    <Button outline onClick={this.toggleModal}>
+                                        <i className="fa fa-sign-in-alt fa-lg" /> Login
+                                    </Button>
+                                </span>
+                            </Collapse>
                         </div>
                     </Navbar>
-                </BrowserRouter>
-            </>
-        );
+
+                    <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                        <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+                        <ModalBody>
+                            <Form onSubmit={this.handleLogin}>
+                                <FormGroup>
+                                    <Label htmlFor="username">Username</Label>
+                                    <Input type="text" id="username" name="username"
+                                        innerRef={(input) => this.username = input} />
+                                </FormGroup>
+                                <FormGroup>
+                                    <Label htmlFor="password">Password</Label>
+                                    <Input type="password" id="password" name="password"
+                                        innerRef={(input) => this.password = input} />
+                                </FormGroup>
+                                <FormGroup check>
+                                    <Label check>
+                                        <Input type="checkbox" name="remember"
+                                            innerRef={(input) => this.remember = input} />
+                                        Remember me
+                                    </Label>
+                                </FormGroup>
+                                <Button type="submit" value="submit" color="primary">Login</Button>
+                            </Form>
+                        </ModalBody>
+                    </Modal>
+                </Router>
+            </React.Fragment>
+        )
     }
 }
 
 
-
-const linkStyle = {
-    margin: "5 10px",
-    textDecoration: "none",
-    color: 'blue'
-};
-
-export default NavigationBar;
+export default NavigationBar; 

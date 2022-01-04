@@ -1,41 +1,35 @@
-.header {
-    background-color: #18042b;
-    font-size: x-large;
-    padding: 20px;
-    text-align: center;
-}
-
-
 body {
-    color: #44474a;
-}
-
-.container {
-    font-family: helvetica, arial, sans-serif;
-    padding: 4em 2em 25em 2em;
-}
-
-
-#process {
-    position: fixed;
-    left: 0;
-    padding-right: 50px;
-    margin-right: 50px;
-    display: flex;
-    font-family: helvetica, arial, sans-serif;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow-x: auto;
-    color: blue;
-    background-color: khaki;
-    height: 95px;
-    width: 100%;
-    margin: auto;
-    top: 75px;
-}
-
-.card-img-overlay .card-title {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  .card-body>.card-title {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  .card {
+    display: d-flex;
+    flex-direction: column;
+  
+    margin-bottom: 1rem;
+    border-radius: 2;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .card-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  
+  h2 {
+    color: #3046C5;
+  }
+  
+  .card-img-overlay .card-title {
     color: rgb(255, 255, 255);
     background-color: rgb(16, 0, 245);
     border: rgb(177, 161, 161);
@@ -46,4 +40,31 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
+  }
+  
+  .row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+  }
+  
+  .site-footer {
+    background-image: linear-gradient(rgb(2, 2, 2));
+    background-color: rgb(255, 251, 251);
+    padding: 20px 0;
+  }
+  
+  .jumbotron {
+    margin: 0;
+    padding: 15px;
+    background-image: linear-gradient(to right, #0f160d, #070a11, #4c504f);
+    color: white;
+  }
+  
+  .jumbotron h2 {
+    color: #CEC8FF;
+  }
+  
+  .navbar-dark {
+    background-color: #4b4949;
+  }

@@ -1,108 +1,139 @@
 
-//Navbar.js
-import { render } from '@testing-library/react';
-import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
-import NavigationBar from './NavigationBarComponent';
+import React, { Component } from 'react';
+import {
+    Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
+    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
+} from 'reactstrap';
+import { NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-const Header = () => {
-    return (
-        <>
-            <div className="container-fluid d-flex justify-content-center"
-                style={{
-                    marginBottom: '25px'
-                }}
-            >
-                <div className="row">
-                    <div className="header"
-                        style={{
-                            flex: 1,
-                            marginTop: '10px',
-                            marginBottom: '10px',
-                            paddingTop: '10px',
-                            paddingBottom: '10px',
-                        }}
-                    >
-                        <div className='row'
-                            style={{
-                                position: 'fixed',
-                                left: '0',
-                                width: '100vw',
-                                overflow: 'hidden'
-                            }}>
+class Header extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isNavOpen: false,
+            isModalOpen: false, // modal is closed by default
+        };
+        this.toggleNav = this.toggleNav.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
+        this.handleLogin = this.handleLogin.bind(this);
+    }
+
+    toggleNav = () => {
+        this.setState({
+            isNavOpen: !this.state.isNavOpen
+        });
+    }
+
+    toggleModal = () => {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+        });
+    }
+
+    handleLogin(event) {
+        alert(`Username:  ${this.username.value}   Password: ${this.password.value} 
+                Remember: ${this.remember.checked}`);
+        this.toggleModal();
+        event.preventDefault();
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <Jumbotron fluid>
+                    <div className="container">
+                        <div className="row">
                             <div className="col">
-                                <div className="navbar navbar-expand-lg navbar-light bg-light"
-                                    expand="lg"
-                                    sticky="top"
-                                    style={{
-                                        sticky: "top",
-                                        width: "100vw",
-                                        position: "fixed",
-                                        top: 0,
-                                        backgroundColor: 'MidnightBlue',
-                                    }}>
-                                    <text style={{
-                                        fontSize: "xx-large",
-                                        align: "center",
-                                        color: 'yellow',
-                                        fontWeight: 'bold',
-                                        font: 'Kalam',
-                                        fontFamily: 'cursive',
-                                        fontStyle: 'italic',
-                                        paddingTop: '10px',
-                                        paddingBottom: '30px',
-                                        marginBottom: '20px'
-                                    }}>
-                                        COMMUNITY KANBAN
-                                    </text>
-                                    <br>
-
-                                    </br>
-                                    <text style={{
-                                        fontSize: "x-large",
-                                        align: "center",
-                                        color: 'white',
-                                        font: 'Arial',
-                                        paddingTop: '10px',
-                                        paddingBottom: '10px',
-                                        marginTop: '50px',
-                                    }}>
-                                        You can't spell Communi
-                                    </text>
-                                    <text style={{
-                                        fontSize: "x-large",
-                                        align: "center",
-                                        color: 'yellow',
-                                        font: 'cougard',
-                                        fontStyle: 'italic',
-                                        fontFamily: 'cursive',
-                                        paddingTop: '10px',
-                                        paddingBottom: '10px',
-                                        marginTop: '50px',
-                                    }}>
-                                        IT
-                                    </text>
-                                    <text style={{
-                                        fontSize: "x-large",
-                                        align: "center",
-                                        color: 'white',
-                                        font: 'Arial',
-                                        paddingTop: '10px',
-                                        paddingBottom: '10px',
-                                        marginTop: '50px',
-                                    }}>
-                                        y without I.T.
-                                    </text>
-
-                                </div >
-
+                                <h1> Community Kanban </h1>
+                                <h2> You can't spell COMMMUNITY without I.T. </h2>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </>
-    )
-};
+                </Jumbotron>
+                <Navbar dark sticky="top" expand="md"
+
+                >
+                    <div className="container">
+                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/whitelogo.png" height="50" width="150" alt="Logo" /></NavbarBrand>
+                        <NavbarToggler onClick={this.toggleNav} />
+                        <Collapse isOpen={this.state.isNavOpen} navbar>
+                            <Nav navbar>
+                                <NavItem>
+                                    <BrowserRouter>
+                                        <NavLink className="nav-link" to="/home">
+                                            <i className="fa fa-home fa-lg" /> Home
+                                        </NavLink>
+                                    </BrowserRouter>
+                                </NavItem>
+                                <NavItem>
+                                    <BrowserRouter>
+                                        <NavLink className="nav-link" to="/directory">
+                                            <i className="fa fa-list fa-lg" /> Directory
+                                        </NavLink>
+                                    </BrowserRouter>
+                                </NavItem>
+                                <NavItem>
+                                    <BrowserRouter>
+                                        <NavLink className="nav-link" to="/aboutus">
+                                            <i className="fa fa-info fa-lg" /> About
+                                        </NavLink>
+                                    </BrowserRouter>
+                                </NavItem>
+                                <NavItem>
+                                    <BrowserRouter>
+                                        <NavLink className="nav-link" to="/contactus">
+                                            <i className="fa fa-address-card fa-lg" /> Contact Us
+                                        </NavLink>
+                                    </BrowserRouter>
+                                </NavItem>
+                                <NavItem>
+                                    <BrowserRouter>
+                                        <NavLink className="nav-link" to="/wiki">
+                                            <i className="fa fa-address-card fa-lg" /> Wiki
+                                        </NavLink>
+                                    </BrowserRouter>
+                                </NavItem>
+                            </Nav>
+                            <span className="navbar-text ml-auto">
+                                <Button outline onClick={this.toggleModal}>
+                                    <i className="fa fa-sign-in-alt fa-lg" /> Login
+                                </Button>
+                            </span>
+                        </Collapse>
+                    </div>
+                </Navbar>
+
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+                    <ModalBody>
+                        <Form onSubmit={this.handleLogin}>
+                            <FormGroup>
+                                <Label htmlFor="username">Username</Label>
+                                <Input type="text" id="username" name="username"
+                                    innerRef={(input) => this.username = input} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="password" id="password" name="password"
+                                    innerRef={(input) => this.password = input} />
+                            </FormGroup>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="checkbox" name="remember"
+                                        innerRef={(input) => this.remember = input} />
+                                    Remember me
+                                </Label>
+                            </FormGroup>
+                            <Button type="submit" value="submit" color="primary">Login</Button>
+                        </Form>
+                    </ModalBody>
+                </Modal>
+            </React.Fragment>
+        )
+    }
+}
+
 
 export default Header;

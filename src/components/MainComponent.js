@@ -27,8 +27,6 @@ class Main extends Component {
                     marginBottom="15px"
                     paddingBottom="15px"
                 />
-                <NavigationBar
-                />
                 <BrowserRouter>
                     <Switch>
                         <Route path='/home' component={HomePage} />

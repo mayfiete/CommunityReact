@@ -12,7 +12,7 @@ const Hero = () => {
         <>
             <div className="container"
                 style={{
-                    position: 'fixed',
+
                     left: '0',
                     top: '105px',
                     width: '100%'
